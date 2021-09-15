@@ -32,8 +32,16 @@ main a {
 
 footer {
     color: var(--text-color);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    width: 100%;
     text-align: center;
-    margin-top: 15rem;
+    font-size: 1.2rem;
+    padding-bottom: 15px;
 }
 
 footer a {
