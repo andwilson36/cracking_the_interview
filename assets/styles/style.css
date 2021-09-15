@@ -20,19 +20,33 @@ header a {
     text-decoration: none;
 }
 
-main { 
+main {
+    color: var(--text-color);
+    margin-top: 7rem;
+    text-align: center;
+}
+
+main h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3rem;
+}
+
+content { 
     text-align: center;
     margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-span a {
-    display: inline-block;
-}
-
-main a {
+content a {
     color: var(--text-color);
     text-decoration: none;
     margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: auto;
 }
 
 footer {
@@ -62,10 +76,12 @@ footer a {
 }
 
 .card-title {
+    font-size: 2rem;
     font-weight: bold;
+    margin-bottom: 8px;
 }
 
 .card-description {
     font-style: italic;
-    font-size: 13px;
+    font-size: .9rem;
 }
