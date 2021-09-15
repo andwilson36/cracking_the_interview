@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styles/reset.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico?" type="image/x-icon">
+    <title>Cracking The Interview</title>
+</head>
+
+<body>
+    <header>
+        <h1>Cracking the Interview</h1>
+    </header>
+    <main>
+        <form>
+            <label for="questionType">Type of Question</label>
+            <select name="questionType" id="questionType">
+                <option value="technical">Technical Question</option>
+                <option value="behavioral">Behavioral Question</option>
+                <option value="algorithm">Algorithm Question</option>
+            </select>
+            <label for="questionLanguage">Program Language</label>
+            <select name="questionLanguage" id="questionLanguage">
+            </select>
+            <label for="questionDifficulty">Difficulty</label>
+            <select name="questionDifficulty" id="questionDifficulty">
+                <option value="basic">Basic</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+            <label for="question">Question</label>
+            <textarea name="question" placeholder="enter the question"></textarea>
+            <label for="answer">Answer</label>
+            <textarea name="answer" placeholder="enter the answer to the question"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <table id="questionDisplay">
+            <tr>
+                <th>Type</th>
+                <th>Language</th>
+                <th>Difficulty</th>
+                <th>Question</th>
+                <th>Answer</th>
+            </tr>
+            <tr>
+                <td>Technical</td>
+                <td>Javascript</td>
+                <td>Basic</td>
+                <td>Do bears eat beats</td>
+                <td>Bears eat beats bears beats battlestar gallactica</td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <p>Made by <a href="#">Andrew Wilson</a> and <a href="#">Brandon Norsworthy</a></p>
+    </footer>
+    <script src="../assets/scripts/dev.js"></script>
+</body>
+
+</html>
