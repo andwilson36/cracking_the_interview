@@ -87,6 +87,7 @@ footer a {
 }
 
 #error404 * {
+    margin-top: 1.5rem;
     color: var(--text-color);
 }
 
