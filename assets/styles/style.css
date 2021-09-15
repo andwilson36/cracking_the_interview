@@ -1,5 +1,6 @@
 :root {
     --text-color: rgb(198, 216, 241);
+    --dark-background: rgb(34, 32, 41);
 }
 
 body {
@@ -9,7 +10,7 @@ body {
 
 header {
     color: var(--text-color);
-    background-color: rgb(34, 32, 41);
+    background-color: var(--dark-background);
     font-size: 3rem;
     padding: 1rem;
 }
@@ -41,10 +42,17 @@ footer a {
     font-weight: bold;
 }
 
+.card {
+    background-color: var(--dark-background);
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
 .card-title {
     font-weight: bold;
 }
 
 .card-description {
     font-style: italic;
+    font-size: 13px;
 }
