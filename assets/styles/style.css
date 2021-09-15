@@ -1,10 +1,14 @@
+:root {
+    --text-color: rgb(198, 216, 241);
+}
+
 body {
     font-family: 'Nunito', sans-serif;
     background-color: rgb(44, 42, 54);
 }
 
 header {
-    color: rgb(198, 216, 241);
+    color: var(--text-color);
     background-color: rgb(34, 32, 41);
     font-size: 3rem;
     padding: 1rem;
@@ -20,19 +24,19 @@ span a {
 }
 
 main a {
-    color: rgb(198, 216, 241);
+    color: var(--text-color);
     text-decoration: none;
     margin: 2rem;
 }
 
 footer {
-    color: rgb(198, 216, 241);
+    color: var(--text-color);
     text-align: center;
     margin-top: 15rem;
 }
 
 footer a {
-    color: rgb(198, 216, 241);
+    color: var(--text-color);
     text-decoration: none;
     font-weight: bold;
 }
