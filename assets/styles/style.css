@@ -83,5 +83,25 @@ footer a {
 
 .card-description {
     font-style: italic;
-    font-size: .9rem;
+    font-size: 13px;
+}
+
+#error404 * {
+    color: var(--text-color);
+}
+
+#error404 span {
+    font-size: 5em;
+}
+
+#error404 h1 {
+    font-size: 5em;
+}
+
+#error404 h3 {
+    font-size: 3em;
+}
+
+#error404 p {
+    font-size: 1.5em;
 }
