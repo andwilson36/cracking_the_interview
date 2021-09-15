@@ -2,3 +2,37 @@ body {
     font-family: 'Nunito', sans-serif;
     background-color: rgb(44, 42, 54);
 }
+
+header {
+    color: rgb(198, 216, 241);
+    background-color: rgb(34, 32, 41);
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+main { 
+    text-align: center;
+    margin-top: 4rem;
+}
+
+span a {
+    display: inline-block;
+}
+
+main a {
+    color: rgb(198, 216, 241);
+    text-decoration: none;
+    margin: 2rem;
+}
+
+footer {
+    color: rgb(198, 216, 241);
+    text-align: center;
+    margin-top: 15rem;
+}
+
+footer a {
+    color: rgb(198, 216, 241);
+    text-decoration: none;
+    font-weight: bold;
+}
