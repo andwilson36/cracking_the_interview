@@ -1,9 +1,5 @@
-import TechnicalQuestions from "./technical.json"
-import BehavioralQuestions from "./behavioral.json"
-import AlgorithmQuestions from "./algorithm.json"
-
 function init() {
-    console.log(TechnicalQuestions)
+    console.log()
     let table = document.querySelector(".questionDisplay")
 }
 

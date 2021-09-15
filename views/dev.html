@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/styles/reset.css">
     <link rel="stylesheet" href="../assets/styles/style.css">
     <link rel="shortcut icon" href="../assets/images/favicon.ico?" type="image/x-icon">
@@ -13,7 +16,7 @@
 
 <body>
     <header>
-        <h1>Cracking the Interview</h1>
+        <h1><a href="../index.html">Cracking the Interview</a></h1>
     </header>
     <main>
         <form>
@@ -23,8 +26,11 @@
                 <option value="behavioral">Behavioral Question</option>
                 <option value="algorithm">Algorithm Question</option>
             </select>
-            <label for="questionLanguage">Program Language</label>
+            <label for="questionLanguage">Programming Language</label>
             <select name="questionLanguage" id="questionLanguage">
+                <option value="javascript">Javascript</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
             </select>
             <label for="questionDifficulty">Difficulty</label>
             <select name="questionDifficulty" id="questionDifficulty">
