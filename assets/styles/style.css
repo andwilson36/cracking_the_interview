@@ -9,10 +9,15 @@ body {
 }
 
 header {
-    color: var(--text-color);
+    font-family: 'Open Sans', sans-serif;
     background-color: var(--dark-background);
-    font-size: 3rem;
+    font-size: 2.8rem;
     padding: 1rem;
+}
+
+header a {
+    color: var(--text-color);
+    text-decoration: none;
 }
 
 main { 
