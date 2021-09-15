@@ -1,32 +1,30 @@
-[
-    {
-        "javascript": {
-            "basics": [
-                {
-                    "question": "this is the question",
-                    "answer": ""
-                }
-            ],
-            "intermediate": [
-                {
-                    "question": "this is the question",
-                    "answer": ""
-                }
-            ],
-            "advanced": [
-                {
-                    "question": "this is the question",
-                    "answer": ""
-                }
-            ]
-        },
-        "html": {
-            "basics": [
-                {
-                    "question": "what does HTML stand for",
-                    "answer": "Hyper Text Mark-up Language"
-                }
-            ]
-        }
+{
+    "javascript": {
+        "basics": [
+            {
+                "question": "this is the question",
+                "answer": ""
+            }
+        ],
+        "intermediate": [
+            {
+                "question": "this is the question",
+                "answer": ""
+            }
+        ],
+        "advanced": [
+            {
+                "question": "this is the question",
+                "answer": ""
+            }
+        ]
+    },
+    "html": {
+        "basics": [
+            {
+                "question": "what does HTML stand for",
+                "answer": "Hyper Text Mark-up Language"
+            }
+        ]
     }
-]
+}
