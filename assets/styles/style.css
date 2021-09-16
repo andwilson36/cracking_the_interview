@@ -15,9 +15,14 @@ header {
     padding: 1rem;
 }
 
-header a {
+h1 a {
     color: var(--text-color);
     text-decoration: none;
+    font-weight: 1000;
+}
+
+h1 a:hover {
+    color: var(--text-color);
 }
 
 main {
@@ -29,6 +34,7 @@ main {
 main h2 {
     font-family: 'Open Sans', sans-serif;
     font-size: 3rem;
+    font-weight: 600;
 }
 
 main h2:hover {
@@ -115,6 +121,7 @@ footer a {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 8px;
+    font-weight: 500;
 }
 
 .card-description {
@@ -123,6 +130,7 @@ footer a {
 }
 
 .card:hover {
+    color: var(--text-color);
     background-color: rgb(29, 27, 34);
     transform: scale(1.05);
     transition: transform 150ms;
