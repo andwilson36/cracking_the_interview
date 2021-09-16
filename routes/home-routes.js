@@ -7,12 +7,12 @@ router.get("/", (req, res) => {
 });
 
 // GET /technical questions
-router.get("/stats", (req, res) => {
+router.get("/technical-questions", (req, res) => {
   res.sendFile(path.join(__dirname, '/../public/views/technical-questions.html'));
 });
 
 // GET /404
-router.get("/stats", (req, res) => {
+router.get("/404", (req, res) => {
   res.sendFile(path.join(__dirname, '/../public/views/404.html'));
 });
 
