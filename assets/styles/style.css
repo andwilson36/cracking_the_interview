@@ -66,6 +66,7 @@ content a {
 
 form {
     background-color: var(--dark-background);
+    border-radius: 5px;
 }
 
 footer {
