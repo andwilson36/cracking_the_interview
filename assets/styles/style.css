@@ -158,6 +158,15 @@ footer a {
     box-shadow: rgb(29, 27, 34) 0px 20px 30px -10px;
 }
 
+.qa-content {
+    background-color: var(--dark-background);
+}
+
+.content-question, .content-answer {
+    margin-top: 5rem;
+    font-size: 1.7rem;
+}
+
 #error404 * {
     margin-top: 1.5rem;
     color: var(--text-color);
