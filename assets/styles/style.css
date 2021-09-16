@@ -88,6 +88,13 @@ footer a {
     font-size: 13px;
 }
 
+.card:hover {
+    background-color: rgb(29, 27, 34);
+    transform: scale(1.05);
+    transition: transform 150ms;
+    box-shadow: rgb(29, 27, 34) 0px 20px 30px -10px;
+}
+
 #error404 * {
     margin-top: 1.5rem;
     color: var(--text-color);
