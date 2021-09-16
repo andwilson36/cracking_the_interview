@@ -22,7 +22,7 @@ header a {
 
 main {
     color: var(--text-color);
-    margin-top: 7rem;
+    margin-top: 7rem !important;
     text-align: center;
 }
 
@@ -32,6 +32,17 @@ main h2 {
 }
 
 main h2:hover {
+    cursor: default;
+}
+
+main h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.5rem;
+    margin: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+main h3:hover {
     cursor: default;
 }
 
@@ -53,6 +64,10 @@ content a {
     height: auto;
 }
 
+form {
+    background-color: var(--dark-background);
+}
+
 footer {
     color: var(--text-color);
     background-color: var(--dark-background);
@@ -60,6 +75,12 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+li {
+    margin-bottom: 1rem;
+    zoom: 1.5;
+    cursor: default;
 }
 
 footer p {
@@ -77,6 +98,10 @@ footer a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: bold;
+}
+
+.row {
+    --bs-gutter-x: 0px;
 }
 
 .card {
