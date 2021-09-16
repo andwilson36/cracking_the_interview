@@ -25,8 +25,37 @@
         <h1><a href="../index.html">Cracking the Interview</a></h1>
     </header>
     <main class="row">
-        <div class="col-4"></div>
-        <form class="col-4">
+        <button>
+            <a class="card">
+                <span class="card-title">Change Settings</span>
+                <span class="card-description">(Change Question Settings)</span>
+            </a>
+        </button>
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Launch static backdrop modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+        <div class="col-1"></div>
+        <!-- <form class="col-4">
             <h3>Select Languages to Study</h3>
             <ul>
                 <li><input type="checkbox"> JavaScript</input></li>
@@ -34,6 +63,15 @@
                 <li><input type="checkbox">  MySQL</input></li>
             </ul>
         </form>
+        <div class="col-1"></div>
+        <form class="col-4">
+            <h3>Select Difficulty</h3>
+            <ul>
+                <li><input type="checkbox"> Basics</input></li>
+                <li><input type="checkbox"> Intermediate</input></li>
+                <li><input type="checkbox">  Advanced</input></li>
+            </ul>
+        </form> -->
     </main>
     <footer>
         <p>Made by <a href="#">Andrew Wilson</a> and <a href="#">Brandon Norsworthy</a></p>
