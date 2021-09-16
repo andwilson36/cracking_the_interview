@@ -1,0 +1,185 @@
+:root {
+    --text-color: rgb(198, 216, 241);
+    --dark-background: rgb(34, 32, 41);
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: rgb(44, 42, 54);
+}
+
+header {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--dark-background);
+    font-size: 2.8rem;
+    padding: 1rem;
+}
+
+h1 a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 1000;
+}
+
+h1 a:hover {
+    color: var(--text-color);
+}
+
+main {
+    color: var(--text-color);
+    margin-top: 2rem !important;
+    text-align: center;
+}
+
+main h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-top: 7rem;
+}
+
+main h2:hover {
+    cursor: default;
+}
+
+main h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.5rem;
+    margin: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+main h3:hover {
+    cursor: default;
+}
+
+content { 
+    text-align: center;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+content a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: auto;
+}
+
+button a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 2rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: auto;
+}
+
+form {
+    background-color: var(--dark-background);
+    border-radius: 5px;
+}
+
+li {
+    margin-bottom: 1rem;
+    zoom: 1.5;
+    cursor: default;
+}
+
+footer {
+    color: var(--text-color);
+    background-color: var(--dark-background);
+    padding-top: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    padding-bottom: 15px;
+}
+
+footer p:hover {
+    cursor: default;
+}
+
+footer a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.row {
+    --bs-gutter-x: 0px;
+}
+
+.card {
+    background-color: var(--dark-background);
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.card-description {
+    font-style: italic;
+    font-size: 13px;
+}
+
+.card:hover {
+    color: var(--text-color);
+    background-color: rgb(29, 27, 34);
+    transform: scale(1.05);
+    transition: transform 150ms;
+    box-shadow: rgb(29, 27, 34) 0px 20px 30px -10px;
+}
+
+.settings-modal-content {
+    background-color: var(--dark-background) !important;
+}
+
+.qa-content {
+    background-color: var(--dark-background);
+}
+
+.content-question, .content-answer {
+    margin-top: 5rem;
+    font-size: 1.7rem;
+}
+
+#error404 * {
+    margin-top: 1.5rem;
+    color: var(--text-color);
+    cursor: default;
+}
+
+#error404 span {
+    font-size: 5em;
+}
+
+#error404 h1 {
+    font-size: 5em;
+}
+
+#error404 h3 {
+    font-size: 3em;
+}
+
+#error404 p {
+    font-size: 1.5em;
+}
