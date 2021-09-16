@@ -15,20 +15,41 @@ header {
     padding: 1rem;
 }
 
-header a {
+h1 a {
     color: var(--text-color);
     text-decoration: none;
+    font-weight: 1000;
+}
+
+h1 a:hover {
+    color: var(--text-color);
 }
 
 main {
     color: var(--text-color);
-    margin-top: 7rem;
+    margin-top: 7rem !important;
     text-align: center;
 }
 
 main h2 {
     font-family: 'Open Sans', sans-serif;
     font-size: 3rem;
+    font-weight: 600;
+}
+
+main h2:hover {
+    cursor: default;
+}
+
+main h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.5rem;
+    margin: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+main h3:hover {
+    cursor: default;
 }
 
 content { 
@@ -49,6 +70,11 @@ content a {
     height: auto;
 }
 
+form {
+    background-color: var(--dark-background);
+    border-radius: 5px;
+}
+
 footer {
     color: var(--text-color);
     background-color: var(--dark-background);
@@ -58,6 +84,12 @@ footer {
     width: 100%;
 }
 
+li {
+    margin-bottom: 1rem;
+    zoom: 1.5;
+    cursor: default;
+}
+
 footer p {
     width: 100%;
     text-align: center;
@@ -65,10 +97,18 @@ footer p {
     padding-bottom: 15px;
 }
 
+footer p:hover {
+    cursor: default;
+}
+
 footer a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: bold;
+}
+
+.row {
+    --bs-gutter-x: 0px;
 }
 
 .card {
@@ -81,6 +121,7 @@ footer a {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 8px;
+    font-weight: 500;
 }
 
 .card-description {
@@ -88,9 +129,18 @@ footer a {
     font-size: 13px;
 }
 
+.card:hover {
+    color: var(--text-color);
+    background-color: rgb(29, 27, 34);
+    transform: scale(1.05);
+    transition: transform 150ms;
+    box-shadow: rgb(29, 27, 34) 0px 20px 30px -10px;
+}
+
 #error404 * {
     margin-top: 1.5rem;
     color: var(--text-color);
+    cursor: default;
 }
 
 #error404 span {
