@@ -188,3 +188,7 @@ footer a {
 #error404 p {
     font-size: 1.5em;
 }
+
+.modal-button {
+    color: #fff;
+}
