@@ -110,7 +110,7 @@ footer {
 
 li {
     margin-bottom: 1rem;
-    zoom: 1.5;
+    /* zoom: 1.5; */
     cursor: default;
 }
 
