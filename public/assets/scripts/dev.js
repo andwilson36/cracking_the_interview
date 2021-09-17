@@ -18,6 +18,14 @@ async function getAllMissions() {
 
 function newQuestion(e) {
    e.preventDefault()
+
+   var jqxhr = $.post( "/api/technical")
+      .done((data) => {
+        console.log(data);
+      })
+      .fail(() => {
+        alert( "error" );
+      })
 }
 
 init()
