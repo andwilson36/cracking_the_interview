@@ -15,7 +15,23 @@ router.get("/technical", async (req, res) => {
 	catch(err) {
 		res.send(err)
 	}
+});
 
+// POST /api/technical
+router.post("/technical", async (req, res) => {
+	console.log(JSON.parse(req.body.body))
+	try {
+		let questions
+		fs.readFile(__dirname + "/../private/technical.json", (err, data) => {
+			if (err) throw err;
+			questions = JSON.parse(data);
+			res.send(questions)
+			console.log(questions)
+		});
+	}
+	catch(err) {
+		res.send(err)
+	}
 });
 
 module.exports = router;

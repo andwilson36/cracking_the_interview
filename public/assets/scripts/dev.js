@@ -19,7 +19,6 @@ async function getAllMissions() {
 	for (const language in questions) {
 		for (const difficulty in questions[language]) {
 			questions[language][difficulty].forEach(element => {
-				console.log(element)
 				let table = document.querySelector("#questionDisplay").firstElementChild
 				let tableRow = document.createElement('tr')
 				let tableData = document.createElement('td')
@@ -42,7 +41,16 @@ async function getAllMissions() {
 function newQuestion(e) {
 	e.preventDefault()
 
-	$.post("/api/technical")
+	$.post("/api/technical", {
+		body: JSON.stringify({
+			category: document.querySelector("#questionType").value,
+			language: document.querySelector("#questionLanguage").value,
+			difficulty: document.querySelector("#questionDifficulty").value,
+			question: document.querySelector("#question").value,
+			answer: document.querySelector("#questionType").value
+		})
+	}
+	)
 		.done((data) => {
 			console.log(data);
 		})
