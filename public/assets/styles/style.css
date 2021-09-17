@@ -29,6 +29,9 @@ main {
     color: var(--text-color);
     margin-top: 2rem !important;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main h2 {
@@ -53,7 +56,7 @@ main h3:hover {
     cursor: default;
 }
 
-content { 
+content {
     text-align: center;
     margin-top: 4rem;
     display: flex;
@@ -71,7 +74,7 @@ content a {
     height: auto;
 }
 
-button { 
+button {
     background-color: rgb(44, 42, 54);
     border: none;
     text-align: center;
@@ -191,4 +194,23 @@ footer a {
 
 .modal-button {
     color: #fff;
+}
+
+#questionDisplay {
+    justify-content: center;
+    background-color: rgb(33, 32, 39);
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80vw;
+    margin-top: 25px;
+}
+
+td, th {
+    border: 1px solid rgb(44, 42, 54);
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(58, 57, 68);
 }
