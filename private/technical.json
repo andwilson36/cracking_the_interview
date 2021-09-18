@@ -1,0 +1,60 @@
+{
+    "javascript": {
+        "basic": [
+            {
+                "question": "What is JavaScript?",
+                "answer": "JavaScript is a client-side and server-side scripting language inserted into HTML pages and is understood by web browsers. JavaScript is also an Object-based Programming language"
+            },
+            {
+                "question": "What are JavaScript Data Types?",
+                "answer": "Number\n    String\n    Boolean\n    Object\n    Undefined"
+            },
+            {
+                "question": "Is it possible to break JavaScript Code into several lines?",
+                "answer": "Breaking within a string statement can be done by using a backslash, ‘\\,’ at the end of the first line.\n\nExample:\n\ndocument. Write (\"This is \\a program,\");\n\nAnd if you change to a new line when not within a string statement, then JavaScript ignores the break in the line.\n\nExample:\n\nvar x=1, y=2,\nz=\nx+y;"
+            },
+            {
+                "question": "Which company developed JavaScript?",
+                "answer": "Netscape is the software company that developed JavaScript."
+            },
+            {
+                "question": "What are undeclared and undefined variables?",
+                "answer": "Undeclared variables are those that do not exist in a program and are not declared. If the program tries to read the value of an undeclared variable, then a runtime error is encountered.\n\nUndefined variables are those that are declared in the program but have not been given any value. If the program tries to read the value of an undefined variable, an undefined value is returned."
+            },
+            {
+                "question": "What are global variables? How are these variable declared?",
+                "answer": "Global variables are available throughout the length of the code so that it has no scope. The var keyword is used to declare a local variable or object. If the var keyword is omitted, a global variable is declared."
+            },
+            {
+                "question": "What is a prompt box?",
+                "answer": "A prompt box is a box that allows the user to enter input by providing a text box. A label and box will be provided to enter the text or number."
+            },
+            {
+                "question": "Which symbol is used for comments in Javascript?",
+                "answer": "// for Single line comments and\n\n/* Multi\n\nLine\n\nComment\n\n*/"
+            }
+        ],
+        "intermediate": [
+            {
+                "question": "What is the use of isNaN function?",
+                "answer": "isNan function returns true if the argument is not a number; otherwise, it is false."
+            },
+            {
+                "question": "What is negative Infinity?",
+                "answer": "Negative Infinity is a number in JavaScript which can be derived by dividing negative number by zero."
+            },
+            {
+                "question": "What is ‘this’ keyword in JavaScript?",
+                "answer": "‘This’ keyword refers to the object from where it was called."
+            },
+            {
+                "question": "What is the working of timers in JavaScript?",
+                "answer": "Timers are used to execute a piece of code at a set time or repeat the code in a given interval. This is done by using the functions setTimeout, setInterval, and clearInterval.\n\nThe setTimeout(function, delay) function is used to start a timer that calls a particular function after the mentioned delay. The setInterval(function, delay) function repeatedly executes the given function in the mentioned delay and only halts when canceled. The clearInterval(id) function instructs the timer to stop."
+            },
+            {
+                "question": "What is the difference between ViewState and SessionState?",
+                "answer": "‘ViewState’ is specific to a page in a session.\n    ‘SessionState’ is specific to user-specific data that can be accessed across all web application pages."
+            }
+        ]
+    }
+}
