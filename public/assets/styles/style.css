@@ -138,7 +138,9 @@ footer a {
 }
 
 .card {
+    color: var(--text-color);
     background-color: var(--dark-background);
+    text-decoration: none;
     padding: 1.5rem;
     border-radius: 5px;
 }
@@ -162,6 +164,11 @@ footer a {
     transition: transform 150ms;
     box-shadow: rgb(29, 27, 34) 0px 20px 30px -10px;
 }
+
+.settings-btn {
+    border: none;
+    border-radius: 7px;
+} 
 
 .qa-content {
     background-color: var(--dark-background);
