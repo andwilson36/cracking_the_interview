@@ -1,6 +1,7 @@
 :root {
     --text-color: rgb(198, 216, 241);
     --dark-background: rgb(34, 32, 41);
+    --modal-background: rgb(39, 38, 47);
 }
 
 body {
@@ -81,31 +82,6 @@ content a {
     height: auto;
 }
 
-/* button {
-    background-color: rgb(44, 42, 54);
-    border: none;
-    text-align: center;
-    margin-top: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-button a {
-    color: var(--text-color);
-    text-decoration: none;
-    margin: 2rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    height: auto;
-} */
-
-form {
-    background-color: var(--dark-background);
-    border-radius: 5px;
-}
-
 footer {
     color: var(--text-color);
     background-color: var(--dark-background);
@@ -179,6 +155,36 @@ footer a {
     font-size: 1.7rem;
 }
 
+.qa-settings-modal {
+    background-color: var(--modal-background);
+    border: solid 2px var(--dark-background);
+    border-radius: 5px;
+}
+
+.settings-modal h3 {
+    font-size: 1.8rem;
+
+}
+
+.settings-modal ul li {
+    margin: 1rem;
+    zoom: 1.3;
+}
+
 .modal-button {
-    color: #fff;
+    color: var(--text-color);
+    background-color: var(--dark-background);
+    text-decoration: none;
+    margin: .6rem;
+    padding: .8rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.modal-button:hover {
+    color: var(--text-color);
+    background-color: rgb(29, 27, 34);
+    transform: scale(1.05);
+    transition: transform 150ms;
+    box-shadow: rgb(29, 27, 34) 0px 10px 20px -10px;
 }
