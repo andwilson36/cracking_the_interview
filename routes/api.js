@@ -9,28 +9,48 @@ router.get("/technical", async (req, res) => {
 			if (err) throw err;
 			questions = JSON.parse(data);
 			res.send(questions)
-			console.log(questions)
 		});
 	}
-	catch(err) {
+	catch (err) {
 		res.send(err)
 	}
 });
 
 // POST /api/technical
-router.post("/technical", async (req, res) => {
-	console.log(JSON.parse(req.body.body))
+router.post("/technical", (req, res) => {
+	let newQuestion = JSON.parse(req.body.body)
+	if (newQuestion.question.trim() === '' || newQuestion.answer.trim() === '') {
+		res.status(400).send("Question or Answer is empty");
+	}
+	let questions = {}
+
 	try {
-		let questions
 		fs.readFile(__dirname + "/../private/technical.json", (err, data) => {
 			if (err) throw err;
 			questions = JSON.parse(data);
-			res.send(questions)
-			console.log(questions)
-		});
+
+			//if language does not exist create that key
+			if (!questions[newQuestion.language]) questions[newQuestion.language] = {};
+			//if difficulty doesn not exist create that array
+			if (!questions[newQuestion.language][newQuestion.difficulty]) questions[newQuestion.language][newQuestion.difficulty] = [];
+
+			//add new question to the question object-
+			questions[newQuestion.language][newQuestion.difficulty].push({
+				question: newQuestion.question.trim(),
+				answer: newQuestion.answer.trim()
+			})
+			res.status(200).send(questions)
+
+			// write new questions into file
+			fs.writeFile(__dirname + "/../private/technical.json", JSON.stringify(questions), (err) => {
+				if (err) {
+					conosle.log(err)
+				}
+			})
+		})
 	}
-	catch(err) {
-		res.send(err)
+	catch (err) {
+		res.status(500).send(err)
 	}
 });
 
