@@ -1,6 +1,6 @@
 # Cracking The Interview
 
-- deployment: https://andwilson36.github.io/cracking_the_interview/
+- deployment: https://cracking-the-interview.herokuapp.com/
 
 ## Build
 1. jQuery
