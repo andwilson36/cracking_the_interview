@@ -159,11 +159,15 @@ footer a {
     background-color: var(--modal-background);
     border: solid 2px var(--dark-background);
     border-radius: 5px;
+    margin-top: 2rem;
+    position: absolute;
+    width: 50%;
+    right: 25;
+    left: 25;
 }
 
 .settings-modal h3 {
     font-size: 1.8rem;
-
 }
 
 .settings-modal ul li {
