@@ -3,7 +3,7 @@
 // console.log(Questions.javascript.basics)
 
 function init() {
-    hideModel()
+    hideModel();
 }
 
 function hideModel() {
@@ -11,16 +11,25 @@ function hideModel() {
         .style.display = "none"; 
 }
 
+function settingsButtonHandler() {
+    document.querySelector(".qa-settings-modal")
+        .style.display = "block";
+}
+
+function saveButtonHandler() {
+    console.log("send info to filter");
+    hideModel();
+}
+
 document
     .querySelector(".settings-btn")
-    .addEventListener("click", function(event) {
-        document.querySelector(".qa-settings-modal")
-            .style.display = "block";
-        event.preventDefault();
-    });
+    .addEventListener("click", settingsButtonHandler);
 
 document
     .querySelector(".cancel-button")
     .addEventListener("click", hideModel);
-    
+
+document
+    .querySelector(".submit")
+    .addEventListener("click", saveButtonHandler);
 init();
