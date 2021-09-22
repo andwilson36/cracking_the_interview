@@ -1,9 +1,14 @@
-//import Questions from "./technical.json"
-
-// console.log(Questions.javascript.basics)
-
 function init() {
     hideModel();
+    getAllQuestions()
+}
+
+function getAllQuestions() {
+    fetch('/api/technical', {
+        method: 'GET',
+    })
+      .then((res) => res.json())
+      .then((data) => data)
 }
 
 function hideModel() {
@@ -32,4 +37,5 @@ document
 document
     .querySelector(".submit")
     .addEventListener("click", saveButtonHandler);
+
 init();
