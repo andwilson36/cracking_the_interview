@@ -1,8 +1,13 @@
-const a = [];
+const a = []; 
 
 function init() {
     hideModel();
     getAllQuestions()
+}
+
+function hideModel() {
+    document.querySelector(".qa-settings-modal")
+        .style.display = "none"; 
 }
 
 async function getAllQuestions() {
@@ -10,16 +15,24 @@ async function getAllQuestions() {
 		.done((data) => {
             a.push(data)
             console.log(a)
+            ranQuestion()
 		})
 		.fail(() => {
 			alert("error");
 			return;
 		})
 }
+// [Math.floor(Math.random() * a.javascript.basic.length)]
+function ranQuestion() {
+    const q = a[0];
+    let ran = q.javascript.basic[Math.floor(Math.random() * q.javascript.basic.length)]
+    serveQuestion(ran)
+}
 
-function hideModel() {
-    document.querySelector(".qa-settings-modal")
-        .style.display = "none"; 
+function serveQuestion(question) {
+    document
+        .querySelector(".content-question")
+        .textContent = question.question
 }
 
 function settingsButtonHandler() {
