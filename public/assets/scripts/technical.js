@@ -6,7 +6,7 @@ function init() {
     getAllQuestions()
 }
 
-function randomNum(min, max) { // min and max included 
+function randomNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
@@ -18,6 +18,8 @@ function hideModel() {
 function hideAnswer() {
     document.querySelector(".answer")
         .style.display = "none";
+    document.querySelector(".click-message")
+        .style.display = "block";
 }
 
 async function getAllQuestions() {
@@ -66,6 +68,9 @@ function saveButtonHandler() {
     console.log("send info to filter");
     hideModel();
 }
+
+document
+    .addEventListener("keydown", init);
 
 document
     .querySelector(".settings-btn")
