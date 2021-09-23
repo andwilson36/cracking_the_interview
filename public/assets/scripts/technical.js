@@ -6,6 +6,10 @@ function init() {
     getAllQuestions()
 }
 
+function randomNum(min, max) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
 function hideModel() {
     document.querySelector(".qa-settings-modal")
         .style.display = "none"; 
@@ -28,10 +32,13 @@ async function getAllQuestions() {
 			return;
 		})
 }
-// [Math.floor(Math.random() * a.javascript.basic.length)]
+
 function ranQuestion() {
     const q = a[0];
-    let ran = q.javascript.basic[Math.floor(Math.random() * q.javascript.basic.length)]
+    let num = randomNum(1,2);
+    let ran;
+    num === 1 ? ran = q.javascript.basic[Math.floor(Math.random() * q.javascript.basic.length)] 
+        : ran = q.javascript.intermediate[Math.floor(Math.random() * q.javascript.intermediate.length)]
     serveQuestion(ran)
 }
 
