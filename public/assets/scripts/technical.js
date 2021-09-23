@@ -7,7 +7,7 @@ function randomNum(min, max) {
 function init() {
     hideModel();
     hideAnswer();
-    setFilters();
+    getFilters()
     getAllQuestions();
 }
 
@@ -23,7 +23,7 @@ function hideAnswer() {
         .style.display = "block";
 }
 
-function setFilters() {
+function getFilters() {
     const jscb = document.querySelector(".js");
     const bcb = document.querySelector(".b");
     const icb = document.querySelector(".i");
@@ -32,13 +32,13 @@ function setFilters() {
     const b = localStorage.getItem("b");
     const i = localStorage.getItem("i");
 
-    js ? jscb.checked = true 
+    js === 'true' ? jscb.checked = true 
         : jscb.checked = false;
 
-    b ? bcb.checked = true 
+    b === 'true' ? bcb.checked = true 
         : bcb.checked = false;
 
-    i ? icb.checked = true 
+    i === 'true' ? icb.checked = true 
         : icb.checked = false;
 }
 
@@ -73,6 +73,8 @@ function serveQuestion(question) {
 }
 
 function settingsButtonHandler() {
+    getFilters();
+
     document.querySelector(".qa-settings-modal")
         .style.display = "block";
 }
@@ -98,7 +100,8 @@ function saveButtonHandler() {
     icb.checked ? localStorage.setItem("i", true) 
         : localStorage.setItem("i", false);
 
-    hideModel();
+    document.querySelector(".qa-settings-modal")
+        .style.display = "none"; 
 }
 
 document
