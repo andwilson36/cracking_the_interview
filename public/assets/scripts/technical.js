@@ -1,14 +1,20 @@
+const a = [];
+
 function init() {
     hideModel();
     getAllQuestions()
 }
 
-function getAllQuestions() {
-    fetch('/api/technical', {
-        method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((data) => data)
+async function getAllQuestions() {
+	await $.get("/api/technical")
+		.done((data) => {
+            a.push(data)
+            console.log(a)
+		})
+		.fail(() => {
+			alert("error");
+			return;
+		})
 }
 
 function hideModel() {
