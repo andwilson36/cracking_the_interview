@@ -1,7 +1,7 @@
 :root {
     --text-color: rgb(198, 216, 241);
     --dark-background: rgb(34, 32, 41);
-    --modal-background: rgb(39, 38, 47);
+    --grey-background: rgb(39, 38, 47);
 }
 
 body {
@@ -173,17 +173,8 @@ footer a {
     border-radius: 7px;
 } 
 
-.qa-content {
-    background-color: var(--dark-background);
-}
-
-.content-question, .content-answer {
-    margin-top: 5rem;
-    font-size: 1.7rem;
-}
-
 .qa-settings-modal {
-    background-color: var(--modal-background);
+    background-color: var(--grey-background);
     border: solid 2px var(--dark-background);
     border-radius: 5px;
     margin-top: 20rem;
@@ -218,4 +209,33 @@ footer a {
     transform: scale(1.05);
     transition: transform 150ms;
     box-shadow: rgb(29, 27, 34) 0px 10px 20px -10px;
+}
+
+.qa-content {
+    background-color: var(--dark-background);
+    font-size: 2rem;
+    border: solid 2px var(--dark-background);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: auto; 
+}
+
+.content-question {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-answer {
+    background-color: rgb(30, 28, 36);
+    margin: 1.5rem;
+    width: 60%;
+    padding: 7rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.click-message {
+    font-size: 13px;
 }
