@@ -85,7 +85,19 @@ function answerButtonHandler() {
 }
 
 function saveButtonHandler() {
-    console.log("send info to filter");
+    const jscb = document.querySelector(".js");
+    const bcb = document.querySelector(".b");
+    const icb = document.querySelector(".i");
+
+    jscb.checked ? localStorage.setItem("js", true) 
+        : localStorage.setItem("js", false);
+
+    bcb.checked ? localStorage.setItem("b", true) 
+        : localStorage.setItem("b", false);
+
+    icb.checked ? localStorage.setItem("i", true) 
+        : localStorage.setItem("i", false);
+
     hideModel();
 }
 
