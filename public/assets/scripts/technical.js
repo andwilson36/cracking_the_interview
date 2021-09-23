@@ -1,13 +1,14 @@
 const a = []; 
 
+function randomNum(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
 function init() {
     hideModel();
     hideAnswer();
-    getAllQuestions()
-}
-
-function randomNum(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min)
+    setFilters();
+    getAllQuestions();
 }
 
 function hideModel() {
@@ -20,6 +21,25 @@ function hideAnswer() {
         .style.display = "none";
     document.querySelector(".click-message")
         .style.display = "block";
+}
+
+function setFilters() {
+    const jscb = document.querySelector(".js");
+    const bcb = document.querySelector(".b");
+    const icb = document.querySelector(".i");
+
+    const js = localStorage.getItem("js");
+    const b = localStorage.getItem("b");
+    const i = localStorage.getItem("i");
+
+    js ? jscb.checked = true 
+        : jscb.checked = false;
+
+    b ? bcb.checked = true 
+        : bcb.checked = false;
+
+    i ? icb.checked = true 
+        : icb.checked = false;
 }
 
 async function getAllQuestions() {
