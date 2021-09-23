@@ -1,5 +1,9 @@
 const a = []; 
 
+const jscb = document.querySelector(".js");
+const bcb = document.querySelector(".b");
+const icb = document.querySelector(".i");
+
 function randomNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
@@ -7,7 +11,7 @@ function randomNum(min, max) {
 function init() {
     hideModel();
     hideAnswer();
-    getFilters()
+    getFilters();
     getAllQuestions();
 }
 
@@ -24,10 +28,6 @@ function hideAnswer() {
 }
 
 function getFilters() {
-    const jscb = document.querySelector(".js");
-    const bcb = document.querySelector(".b");
-    const icb = document.querySelector(".i");
-
     const js = localStorage.getItem("js");
     const b = localStorage.getItem("b");
     const i = localStorage.getItem("i");
@@ -45,9 +45,8 @@ function getFilters() {
 async function getAllQuestions() {
 	await $.get("/api/technical")
 		.done((data) => {
-            a.push(data)
-            console.log(a)
-            ranQuestion()
+            a.push(data);
+            ranQuestion();
 		})
 		.fail(() => {
 			alert("error");
@@ -59,16 +58,20 @@ function ranQuestion() {
     const q = a[0];
     let num = randomNum(1,2);
     let ran;
-    num === 1 ? ran = q.javascript.basic[Math.floor(Math.random() * q.javascript.basic.length)] 
-        : ran = q.javascript.intermediate[Math.floor(Math.random() * q.javascript.intermediate.length)]
-    serveQuestion(ran)
+    icb.checked && bcb.checked ? num === 1 ? ran = q.javascript.basic[Math.floor(Math.random() * q.javascript.basic.length)] 
+                                    : ran = q.javascript.intermediate[Math.floor(Math.random() * q.javascript.intermediate.length)]
+        : icb.checked ? ran = q.javascript.intermediate[Math.floor(Math.random() * q.javascript.intermediate.length)]
+        : ran = q.javascript.basic[Math.floor(Math.random() * q.javascript.basic.length)];
+    
+    serveQuestion(ran);
 }
 
 function serveQuestion(question) {
     document
         .querySelector(".content-question")
         .textContent = question.question;
-    document.querySelector(".answer")
+    document
+        .querySelector(".answer")
         .textContent = question.answer;
 }
 
@@ -87,10 +90,6 @@ function answerButtonHandler() {
 }
 
 function saveButtonHandler() {
-    const jscb = document.querySelector(".js");
-    const bcb = document.querySelector(".b");
-    const icb = document.querySelector(".i");
-
     jscb.checked ? localStorage.setItem("js", true) 
         : localStorage.setItem("js", false);
 
