@@ -1,4 +1,9 @@
-const a = []; 
+const arr = []; 
+
+const js = localStorage.getItem("js");
+const b = localStorage.getItem("b");
+const i = localStorage.getItem("i");
+const a = localStorage.getItem("a");
 
 let jscb = document.querySelector(".js").checked;
 let bcb = document.querySelector(".b").checked;
@@ -29,11 +34,6 @@ function hideAnswer() {
 }
 
 function getFilters() {
-    const js = localStorage.getItem("js");
-    const b = localStorage.getItem("b");
-    const i = localStorage.getItem("i");
-    const a = localStorage.getItem("a");
-
     js === 'true' ? jscb = true 
         : jscb = false;
 
@@ -50,7 +50,7 @@ function getFilters() {
 async function getAllQuestions() {
 	await $.get("/api/technical")
 		.done((data) => {
-            a.push(data);
+            arr.push(data);
             ranQuestion();
 		})
 		.fail(() => {
@@ -60,8 +60,19 @@ async function getAllQuestions() {
 }
 
 function ranQuestion() {
-    const q = a[0];
+    const q = arr[0];
     console.log(q)
+    js === 'true' ? jscb = true 
+        : jscb = false;
+
+    b === 'true' ? bcb = true 
+        : bcb = false;
+
+    i === 'true' ? icb = true 
+        : icb = false;
+
+    a === 'true' ? acb = true 
+        : acb = false;
     // let num = randomNum(1,3);
     // let ran;
     // icb.checked && bcb.checked ? num === 1 ? ran = q.javascript.basic[Math.floor(Math.random() * q.javascript.basic.length)] 
