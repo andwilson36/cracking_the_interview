@@ -3,6 +3,7 @@ const a = [];
 const jscb = document.querySelector(".js");
 const bcb = document.querySelector(".b");
 const icb = document.querySelector(".i");
+const acb = document.querySelector(".a");
 
 function randomNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
@@ -31,6 +32,7 @@ function getFilters() {
     const js = localStorage.getItem("js");
     const b = localStorage.getItem("b");
     const i = localStorage.getItem("i");
+    const a = localStorage.getItem("a");
 
     js === 'true' ? jscb.checked = true 
         : jscb.checked = false;
@@ -40,6 +42,9 @@ function getFilters() {
 
     i === 'true' ? icb.checked = true 
         : icb.checked = false;
+
+    a === 'true' ? acb.checked = true 
+        : acb.checked = false;
 }
 
 async function getAllQuestions() {
@@ -56,7 +61,7 @@ async function getAllQuestions() {
 
 function ranQuestion() {
     const q = a[0];
-    let num = randomNum(1,2);
+    let num = randomNum(1,3);
     let ran;
     icb.checked && bcb.checked ? num === 1 ? ran = q.javascript.basic[Math.floor(Math.random() * q.javascript.basic.length)] 
                                     : ran = q.javascript.intermediate[Math.floor(Math.random() * q.javascript.intermediate.length)]
@@ -98,6 +103,9 @@ function saveButtonHandler() {
 
     icb.checked ? localStorage.setItem("i", true) 
         : localStorage.setItem("i", false);
+
+    acb.checked ? localStorage.setItem("a", true) 
+        : localStorage.setItem("a", false);
 
     document.querySelector(".qa-settings-modal")
         .style.display = "none"; 
