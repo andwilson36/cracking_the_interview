@@ -1,9 +1,9 @@
 const a = []; 
 
-const jscb = document.querySelector(".js").checked;
-const bcb = document.querySelector(".b").checked;
-const icb = document.querySelector(".i").checked;
-const acb = document.querySelector(".a").checked;
+let jscb = document.querySelector(".js").checked;
+let bcb = document.querySelector(".b").checked;
+let icb = document.querySelector(".i").checked;
+let acb = document.querySelector(".a").checked;
 
 function randomNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
