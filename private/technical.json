@@ -56,7 +56,7 @@
                 "answer": "‘ViewState’ is specific to a page in a session.\n    ‘SessionState’ is specific to user-specific data that can be accessed across all web application pages."
             }
         ],
-        "Advanced": [
+        "advanced": [
             {
                 "question": "What is Object Destructuring?",
                 "answer": "Object destructuring is a new way to extract elements from an object or an array."
