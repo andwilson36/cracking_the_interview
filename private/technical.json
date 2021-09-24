@@ -55,6 +55,20 @@
                 "question": "What is the difference between ViewState and SessionState?",
                 "answer": "‘ViewState’ is specific to a page in a session.\n    ‘SessionState’ is specific to user-specific data that can be accessed across all web application pages."
             }
+        ],
+        "Advanced": [
+            {
+                "question": "What is Object Destructuring?",
+                "answer": "Object destructuring is a new way to extract elements from an object or an array."
+            },
+            {
+                "question": "What is a Temporal Dead Zone?",
+                "answer": "Temporal Dead Zone is a behaviour that occurs with variables declared using let and const keywords."
+            },
+            {
+                "question": "Explain WeakMap in javascript.",
+                "answer": "In javascript, Map is used to store key-value pairs. The key-value pairs can be of both primitive and non-primitive types."
+            }
         ]
     }
 }
