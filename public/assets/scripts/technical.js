@@ -70,7 +70,6 @@ function checkForRepeat(question) {
     if (prev === question.question) {
         return true;
     } else {
-        console.log(question.question)
         localStorage.setItem("prevQ", question.question)
         return false;
     }
