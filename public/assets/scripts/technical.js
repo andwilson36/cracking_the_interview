@@ -3,6 +3,7 @@ const a = [];
 const jscb = document.querySelector(".js");
 const bcb = document.querySelector(".b");
 const icb = document.querySelector(".i");
+const acb = document.querySelector(".a");
 
 function randomNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
@@ -56,10 +57,11 @@ async function getAllQuestions() {
 
 function ranQuestion() {
     const q = a[0];
-    let num = randomNum(1,2);
+    let num = randomNum(1,3);
     let ran;
-    icb.checked && bcb.checked ? num === 1 ? ran = q.javascript.basic[Math.floor(Math.random() * q.javascript.basic.length)] 
-                                    : ran = q.javascript.intermediate[Math.floor(Math.random() * q.javascript.intermediate.length)]
+    icb.checked && bcb.checked && acb.checked ? num === 1 ? ran = q.javascript.basic[Math.floor(Math.random() * q.javascript.basic.length)] 
+                                    : num === 2 ? ran = q.javascript.intermediate[Math.floor(Math.random() * q.javascript.intermediate.length)]
+                                    : ran = q.javascript.advanced[Math.floor(Math.random() * q.javascript.advanced.length)]
         : icb.checked ? ran = q.javascript.intermediate[Math.floor(Math.random() * q.javascript.intermediate.length)]
         : ran = q.javascript.basic[Math.floor(Math.random() * q.javascript.basic.length)];
     checkForRepeat(ran) ? init() : serveQuestion(ran);
