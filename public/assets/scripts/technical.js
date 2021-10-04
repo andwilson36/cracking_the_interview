@@ -62,8 +62,18 @@ function ranQuestion() {
                                     : ran = q.javascript.intermediate[Math.floor(Math.random() * q.javascript.intermediate.length)]
         : icb.checked ? ran = q.javascript.intermediate[Math.floor(Math.random() * q.javascript.intermediate.length)]
         : ran = q.javascript.basic[Math.floor(Math.random() * q.javascript.basic.length)];
-    
-    serveQuestion(ran);
+    checkForRepeat(ran) ? init() : serveQuestion(ran);
+}
+
+function checkForRepeat(question) {
+    let prev = localStorage.getItem("prevQ");
+    if (prev === question.question) {
+        return true;
+    } else {
+        console.log(question.question)
+        localStorage.setItem("prevQ", question.question)
+        return false;
+    }
 }
 
 function serveQuestion(question) {
