@@ -1,14 +1,12 @@
-const arr = []; 
+const a = []; 
 
-const js = localStorage.getItem("js");
-const b = localStorage.getItem("b");
-const i = localStorage.getItem("i");
-const a = localStorage.getItem("a");
+const jscb = document.querySelector(".js");
+const bcb = document.querySelector(".b");
+const icb = document.querySelector(".i");
 
-let jscb = document.querySelector(".js").checked;
-let bcb = document.querySelector(".b").checked;
-let icb = document.querySelector(".i").checked;
-let acb = document.querySelector(".a").checked;
+function randomNum(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
 
 function init() {
     hideModel();
@@ -30,23 +28,24 @@ function hideAnswer() {
 }
 
 function getFilters() {
-    js === 'true' ? jscb = true 
-        : jscb = false;
+    const js = localStorage.getItem("js");
+    const b = localStorage.getItem("b");
+    const i = localStorage.getItem("i");
 
-    b === 'true' ? bcb = true 
-        : bcb = false;
+    js === 'true' ? jscb.checked = true 
+        : jscb.checked = false;
 
-    i === 'true' ? icb = true 
-        : icb = false;
+    b === 'true' ? bcb.checked = true 
+        : bcb.checked = false;
 
-    a === 'true' ? acb = true 
-        : acb = false;
+    i === 'true' ? icb.checked = true 
+        : icb.checked = false;
 }
 
 async function getAllQuestions() {
 	await $.get("/api/technical")
 		.done((data) => {
-            arr.push(data);
+            a.push(data);
             ranQuestion();
 		})
 		.fail(() => {
@@ -56,19 +55,14 @@ async function getAllQuestions() {
 }
 
 function ranQuestion() {
-    const q = arr[0];
-    console.log(q)
-    js === 'true' ? jscb = true 
-        : jscb = false;
-
-    b === 'true' ? bcb = true 
-        : bcb = false;
-
-    i === 'true' ? icb = true 
-        : icb = false;
-
-    a === 'true' ? acb = true 
-        : acb = false;
+    const q = a[0];
+    let num = randomNum(1,2);
+    let ran;
+    icb.checked && bcb.checked ? num === 1 ? ran = q.javascript.basic[Math.floor(Math.random() * q.javascript.basic.length)] 
+                                    : ran = q.javascript.intermediate[Math.floor(Math.random() * q.javascript.intermediate.length)]
+        : icb.checked ? ran = q.javascript.intermediate[Math.floor(Math.random() * q.javascript.intermediate.length)]
+        : ran = q.javascript.basic[Math.floor(Math.random() * q.javascript.basic.length)];
+    
     serveQuestion(ran);
 }
 
@@ -96,17 +90,14 @@ function answerButtonHandler() {
 }
 
 function saveButtonHandler() {
-    jscb ? localStorage.setItem("js", true) 
+    jscb.checked ? localStorage.setItem("js", true) 
         : localStorage.setItem("js", false);
 
-    bcb ? localStorage.setItem("b", true) 
+    bcb.checked ? localStorage.setItem("b", true) 
         : localStorage.setItem("b", false);
 
-    icb ? localStorage.setItem("i", true) 
+    icb.checked ? localStorage.setItem("i", true) 
         : localStorage.setItem("i", false);
-
-    acb ? localStorage.setItem("a", true) 
-        : localStorage.setItem("a", false);
 
     document.querySelector(".qa-settings-modal")
         .style.display = "none"; 
