@@ -10,10 +10,6 @@ let bcb = document.querySelector(".b").checked;
 let icb = document.querySelector(".i").checked;
 let acb = document.querySelector(".a").checked;
 
-function randomNum(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min)
-}
-
 function init() {
     hideModel();
     hideAnswer();
@@ -73,13 +69,6 @@ function ranQuestion() {
 
     a === 'true' ? acb = true 
         : acb = false;
-    // let num = randomNum(1,3);
-    // let ran;
-    // icb.checked && bcb.checked ? num === 1 ? ran = q.javascript.basic[Math.floor(Math.random() * q.javascript.basic.length)] 
-    //                                 : ran = q.javascript.intermediate[Math.floor(Math.random() * q.javascript.intermediate.length)]
-    //     : icb.checked ? ran = q.javascript.intermediate[Math.floor(Math.random() * q.javascript.intermediate.length)]
-    //     : ran = q.javascript.basic[Math.floor(Math.random() * q.javascript.basic.length)];
-    
     serveQuestion(ran);
 }
 
