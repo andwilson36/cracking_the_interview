@@ -126,7 +126,7 @@ function saveButtonHandler() {
 }
 
 document
-    .addEventListener("keydown", init);
+    .addEventListener("keyup", init);
 
 document
     .querySelector(".settings-btn")
