@@ -4,6 +4,15 @@
     --grey-background: rgb(39, 38, 47);
 }
 
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-5%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 body {
     font-family: 'Nunito', sans-serif;
     background-color: rgb(44, 42, 54);
@@ -40,6 +49,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: .7s ease-out 0s 1 slideInFromLeft;
 }
 
 main h2 {
@@ -171,7 +181,7 @@ footer a {
 .settings-btn {
     border: none;
     border-radius: 7px;
-} 
+}
 
 .qa-settings-modal {
     background-color: var(--grey-background);
@@ -219,7 +229,7 @@ footer a {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    height: auto; 
+    height: auto;
     margin-bottom: 5rem;
 }
 
