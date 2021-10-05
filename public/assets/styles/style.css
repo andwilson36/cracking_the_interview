@@ -6,7 +6,7 @@
 
 @keyframes left {
     0% {
-        transform: translateX(-5%);
+        transform: translateX(-2%);
     }
     100% {
         transform: translateX(0);
@@ -58,7 +58,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: .7s ease-out 0s 1 left;
+    animation: .4s ease-out 0s 1 left;
 }
 
 main h2 {
