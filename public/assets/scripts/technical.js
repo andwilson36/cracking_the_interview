@@ -74,7 +74,7 @@ function ranQuestion() {
                             : acb.checked ? ran = q.javascript.advanced[Math.floor(Math.random() * q.javascript.advanced.length)]
                                 : allChecked === 1 ? ran = q.javascript.basic[Math.floor(Math.random() * q.javascript.basic.length)]
                                     : allChecked === 2 ? ran = q.javascript.intermediate[Math.floor(Math.random() * q.javascript.intermediate.length)]
-                                        : ran = q.javascript.advanced[Math.floor(Math.random() * q.javascript.advanced.length)]
+                                        : ran = q.javascript.advanced[Math.floor(Math.random() * q.javascript.advanced.length)];
     checkForRepeat(ran) ? init() : serveQuestion(ran);
 }
 
@@ -83,7 +83,7 @@ function checkForRepeat(question) {
     if (prev === question.question) {
         return true;
     } else {
-        localStorage.setItem("prevQ", question.question)
+        localStorage.setItem("prevQ", question.question);
         return false;
     }
 }
