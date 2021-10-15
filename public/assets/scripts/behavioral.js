@@ -12,10 +12,6 @@ async function getAllQuestions() {
         })
 }
 
-(function () {
-    getAllQuestions();
-})();
-
 function ranQuestion() {
     let randomQuestion = a[0].behavioral.questions[Math.floor(Math.random() * a[0].behavioral.questions.length)];
     checkForRepeat(randomQuestion) ? ranQuestion() : serveQuestion(randomQuestion);
@@ -39,3 +35,20 @@ function serveQuestion(question) {
         .querySelector(".answer")
         .textContent = question.answer;
 }
+
+function answerButtonHandler() {
+    document.querySelector(".click-message")
+        .style.display = "none";
+    document.querySelector(".answer")
+        .style.display = "block";
+}
+
+document
+    .querySelector(".content-answer")
+    .addEventListener("click", answerButtonHandler);
+
+(function () {
+    document.querySelector(".answer")
+        .style.display = "none";
+    getAllQuestions();
+})();
