@@ -1,29 +1,17 @@
 {
-    "javascript": {
-        "basics": [
+    "behavioral": {
+        "questions": [
             {
-                "question": "this is the question",
-                "answer": ""
-            }
-        ],
-        "intermediate": [
+                "question": "This is a question 1",
+                "answer": "This is the anwser 1"
+            },
             {
-                "question": "this is the question",
-                "answer": ""
-            }
-        ],
-        "advanced": [
+                "question": "This is a question 2",
+                "answer": "This is the anwser 2"
+            },
             {
-                "question": "this is the question",
-                "answer": ""
-            }
-        ]
-    },
-    "html": {
-        "basics": [
-            {
-                "question": "what does HTML stand for",
-                "answer": "Hyper Text Mark-up Language"
+                "question": "This is a question 3",
+                "answer": "This is the anwser 3"
             }
         ]
     }
