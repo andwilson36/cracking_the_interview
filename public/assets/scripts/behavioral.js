@@ -4,7 +4,7 @@ async function getAllQuestions() {
     await $.get("/api/behavioral")
         .done((data) => {
             a.push(data);
-            //ranQuestion();
+            ranQuestion();
         })
         .fail(() => {
             alert("error");
@@ -12,6 +12,11 @@ async function getAllQuestions() {
         })
 }
 
-getAllQuestions()
+(function () {
+    getAllQuestions();
+})();
 
-console.log(a)
+function ranQuestion() {
+    let randomQuestion = a[0].behavioral.questions[Math.floor(Math.random() * a[0].behavioral.questions.length)];
+    console.log(randomQuestion)
+}
