@@ -13,6 +13,10 @@ async function getAllQuestions() {
 }
 
 function ranQuestion() {
+    document.querySelector(".answer")
+        .style.display = "none";
+    document.querySelector(".click-message")
+        .style.display = "block";
     let randomQuestion = a[0].behavioral.questions[Math.floor(Math.random() * a[0].behavioral.questions.length)];
     checkForRepeat(randomQuestion) ? ranQuestion() : serveQuestion(randomQuestion);
 }
@@ -44,11 +48,12 @@ function answerButtonHandler() {
 }
 
 document
+    .addEventListener("keyup", ranQuestion);
+
+document
     .querySelector(".content-answer")
     .addEventListener("click", answerButtonHandler);
 
 (function () {
-    document.querySelector(".answer")
-        .style.display = "none";
     getAllQuestions();
 })();
