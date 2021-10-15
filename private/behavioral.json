@@ -2,16 +2,32 @@
     "behavioral": {
         "questions": [
             {
-                "question": "This is a question 1",
-                "answer": "This is the anwser 1"
+                "question": "Tell me about a time you had to work closely with someone whose personality or work style clashed with yours.",
+                "answer": "It’s okay to be honest here, but don’t bash your former colleague. It’s important to show that you can be flexible and overcome challenges."
             },
             {
-                "question": "This is a question 2",
-                "answer": "This is the anwser 2"
+                "question": "Talk about a time when you made a mistake that affected a colleague. How did you handle it and what was the outcome?",
+                "answer": "The employer wants to see that you own your mistakes rather than mounting a defense or deflecting blame. Admit something you did, and explain how you corrected the mistake."
             },
             {
-                "question": "This is a question 3",
-                "answer": "This is the anwser 3"
+                "question": "Let’s say you need something important from a coworker and that person isn’t responding. How would you deal with this?",
+                "answer": "It’s important to show that you’re persistent and able to follow through. Just be careful not to give the impression that you’d be unreasonable or belligerent."
+            },
+            {
+                "question": "Tell me about a time when you had to manage multiple responsibilities. How did you handle that?",
+                "answer": "If you’re a great multitasker, you may be tempted to brag. Resist the urge. Instead of trying to make yourself sound like a superhero, try showing your capacity to learn."
+            },
+            {
+                "question": "Let’s say you’re working on a major project and you’re in the weeds. How do you find your way out?",
+                "answer": "We all end up in the weeds now and then, so don’t blow off this question by saying it’s never happened to you. Even the most productive rockstar can think of a time when things went south."
+            },
+            {
+                "question": "Sometimes we have an all-hands-on-deck situation that may require everyone to work extra hours. How would you handle that?",
+                "answer": "Like it or not, we’re working more hours these days. Although you don’t want to become a slave to the office, if your prospective employer has asked you this question, you can be sure she’s going to need you to be a team player."
+            },
+            {
+                "question": "Give me an example of how you set goals for yourself.",
+                "answer": "The employer wants to know that you’re focused on goals and what process you use to achieve them. Prepare an example that illustrates the steps you took to accomplish something in your career."
             }
         ]
     }
